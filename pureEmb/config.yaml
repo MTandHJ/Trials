@@ -1,0 +1,13 @@
+command: python main.py
+envs:
+  root: ../../data/MovieLens1M
+  dataset: MovieLens1M
+  device: 0,1,2,3
+params:
+  criterion: [BPRLoss, BCELoss]
+  optimizer: [adam, sgd]
+  weight_decay: [0, 1e-8, 1e-4, 5e-4]
+  learning_rate: [1e-4, 1e-3, 1e-2]
+  batch_size: [32, 128, 1024]
+  embedding_dim: [4, 8, 16, 32, 64]
+  epochs: 20
