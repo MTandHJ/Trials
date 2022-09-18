@@ -16,7 +16,7 @@ from freerec.data.tags import FEATURE, SPARSE, DENSE, USER, ITEM, ID, TARGET
 from freerec.data.fields import SparseField, DenseField
 from freerec.data.preprocessing import Binarizer
 
-assert freerec.__version__ == "0.0.14", "Version Not Match, 0.0.14 required ..."
+assert freerec.__version__ == "0.0.15", "Version Not Match, 0.0.15 required ..."
 
 cfg = Parser()
 cfg.add_argument("-eb", "--embedding_dim", type=int, default=8)
@@ -29,7 +29,7 @@ cfg.set_defaults(
     batch_size=256,
     optimizer='adam',
     lr=1e-3,
-    weight_decay=1e-8
+    weight_decay=1e-4
 )
 cfg.compile()
 
