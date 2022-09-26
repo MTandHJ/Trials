@@ -1,0 +1,15 @@
+command: python ortho.py
+envs:
+  root: ../../data/MovieLens1M
+  dataset: MovieLens1M
+  device: 0,1,2,3
+params:
+  criterion: [BPRLoss, BCELoss]
+  weight_decay: [0, 1e-8, 1e-6, 1e-4]
+  learning_rate: [1e-3, 5e-3]
+  batch_size: [32, 256]
+defaults:
+  regularizer: ortho
+  optimizer: adam
+  embedding_dim: 32
+  epochs: 20
