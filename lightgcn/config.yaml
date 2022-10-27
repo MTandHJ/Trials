@@ -1,0 +1,13 @@
+command: python main.py
+envs:
+  root: ../../data
+  dataset: Gowalla_m1
+  device: 0,1,2,3
+params:
+  weight_decay: [0, 1e-8, 1e-4]
+  reg: ['True', 'False']
+  self_loops: ['True', 'False']
+defaults:
+  weight_decay: 1e-4
+  reg: 'True'
+  self_loops: 'False'
